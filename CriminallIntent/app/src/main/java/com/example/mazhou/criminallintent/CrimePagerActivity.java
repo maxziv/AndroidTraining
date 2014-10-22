@@ -1,18 +1,16 @@
 package com.example.mazhou.criminallintent;
 
-import java.util.ArrayList;
-import java.util.UUID;
-
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-
 import android.support.v4.view.ViewPager;
 
-public class CrimePagerActivity extends FragmentActivity {
+import java.util.ArrayList;
+import java.util.UUID;
+
+public class CrimePagerActivity extends FragmentActivity implements CrimeFragment.Callbacks {
     ViewPager mViewPager;
 
     @Override
@@ -45,5 +43,9 @@ public class CrimePagerActivity extends FragmentActivity {
                 break;
             } 
         }
+    }
+
+    public void onCrimeUpdated(Crime crime) {
+        // do nothing        
     }
 }
